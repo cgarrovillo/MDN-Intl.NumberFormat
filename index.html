@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <span id="price"> </span>
+
+    <script>
+      const span = document.getElementById('price')
+      const unit_amount = 5000
+      const formatted = new Intl.NumberFormat(['en-US'], {
+        style: 'currency',
+        currency: 'CAD',
+        currencyDisplay: 'narrowSymbol',
+        minimumFractionDigits: 0,
+        maximumFractionDigits: 0,
+      })
+
+      span.innerHTML = formatted
+    </script>
+  </body>
+</html>
