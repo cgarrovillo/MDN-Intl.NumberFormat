@@ -12,7 +12,7 @@
     <script>
       const span = document.getElementById('price')
       const unit_amount = 5000
-      const formatted = new Intl.NumberFormat(['en-US'], {
+      const toFormat = new Intl.NumberFormat(['en-US'], {
         style: 'currency',
         currency: 'CAD',
         currencyDisplay: 'narrowSymbol',
@@ -20,7 +20,7 @@
         maximumFractionDigits: 0,
       })
 
-      span.innerHTML = formatted
+      span.innerHTML = toFormat.format(unit_amount)
     </script>
   </body>
 </html>
